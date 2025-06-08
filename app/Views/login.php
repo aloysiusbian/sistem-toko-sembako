@@ -29,7 +29,11 @@
 <body>
 
 <!-- Judul di Tengah -->
-<h1 class="text-center my-4">TOKO SEMBAKO</h1>
+<!-- Judul dan Logo di Tengah -->
+<div class="text-center my-4">
+  <h1 class="mb-3">TOKO SEMBAKO</h1>
+  <img src="LogoSembakoKu.png" alt="SembakoKu" height="70px">
+</div>
 
 <div class="container-fluid">
   <div class="row vh-100">
