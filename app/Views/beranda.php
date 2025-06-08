@@ -7,16 +7,22 @@
     <title>Toko Sembako Online</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <style>
         body {
             font-family: 'Lato', sans-serif;
         }
 
-        h1, h2, h3, .fw-bold {
+        h1,
+        h2,
+        h3,
+        .fw-bold {
             font-weight: 700;
         }
 
-        p, span, a {
+        p,
+        span,
+        a {
             font-weight: 400;
         }
     </style>

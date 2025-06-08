@@ -8,4 +8,5 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/beranda', 'BerandaController::index');
 $routes->get('/login', 'loginController::index');
-$routes->match(['get','post'], '/register', ['registerController::index']);
+$routes->get('/register', 'RegisterController::index');
+
