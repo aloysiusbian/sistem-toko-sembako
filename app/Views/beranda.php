@@ -6,41 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toko Sembako Online</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        h1, h2, h3, .fw-bold {
+            font-weight: 700;
+        }
+
+        p, span, a {
+            font-weight: 400;
+        }
+    </style>
+
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="javascript:void(0)"><img src="LogoSembakoKu.png" alt="SembakoKu" height="50px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Link</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Search">
-                        <button class="btn btn-primary" type="button">Search</button>
-                    </form>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid d-flex justify-content-between align-items-center px-4">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="LogoSembakoKu.png" alt="SembakoKu" height="45" style="padding-left: 50px;" class="me-2">
+                </a>
+
+                <!-- Search Bar -->
+                <form class="d-flex flex-grow-1 mx-4" style="max-width: 500px;">
+                    <input class="form-control rounded-start-pill" type="search" placeholder="Search">
+                    <button class="btn btn-success rounded-end-pill px-4" type="submit">Search</button>
+                </form>
+
+                <!-- Icons + Auth Buttons -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-success fs-5"><i class="bi bi-house-door-fill"></i></a>
+                    <a href="#" class="text-success fs-5"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#" class="text-success fs-5"><i class="bi bi-cart-fill"></i></a>
+                    <a href="#" class="text-dark fw-semibold text-decoration-none">Register</a>
+                    <button class="btn btn-success rounded-pill px-3">Login</button>
                 </div>
             </div>
         </nav>
     </header>
 
-    <footer>
-        &copy; 2025 SembakoKu. Semua hak dilindungi.
+
+    <footer class="bg-light text-dark mt-5 pt-4 pb-3 border-top">
+        <div class="container">
+            <div class="row">
+
+                <!-- Tentang SembakoKu -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-success">SembakoKu</h5>
+                    <p class="small">Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga terbaik dan pengiriman cepat.</p>
+                </div>
+
+                <!-- Link Navigasi -->
+                <div class="col-md-4 mb-3">
+                    <h6 class="text-dark">Navigasi</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-dark">Beranda</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Produk</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Favorit</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Keranjang</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kontak & Sosial Media -->
+                <div class="col-md-4 mb-3">
+                    <h6 class="text-dark">Hubungi Kami</h6>
+                    <p class="small mb-1"><i class="bi bi-envelope-fill me-2"></i> support@sembakoku.id</p>
+                    <p class="small mb-1"><i class="bi bi-telephone-fill me-2"></i> +62 812-3456-7890</p>
+                    <div>
+                        <a href="#" class="text-success me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-success me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-success fs-5"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="text-center small text-muted">
+                &copy; 2025 SembakoKu. All rights reserved.
+            </div>
+        </div>
     </footer>
+
 
 </body>
 
