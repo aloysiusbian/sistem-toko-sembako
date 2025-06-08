@@ -1,78 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-  <!-- Bootstrap CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - SembakoKu</title>
+
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    .product-img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(82, 20, 196, 0.2);
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #f8faf9;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
     }
-    .left-section {
-      background-color: #f8f9fa;
-      padding: 20px;
+
+    .container-fluid {
+      height: 100%;
     }
-    .login-card {
+
+    .left-side {
+      background-color: #e5f4ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .left-side img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .right-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      background-color: #ffffff;
+    }
+
+    .login-form {
       max-width: 400px;
-      margin: auto;
+      width: 100%;
     }
-    .vh-100 {
-      min-height: 100vh;
+
+    .login-form h3 {
+      color: #2e5f4d;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-control {
+      background-color: #eef2f1;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 15px;
+      color: #2e5f4d;
+    }
+
+    .form-control::placeholder {
+      color: #a0b3aa;
+    }
+
+    .btn-login {
+      background-color: #2e5f4d;
+      color: white;
+      border-radius: 30px;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .btn-login:hover {
+      background-color: #264e3f;
+    }
+
+    .form-text a {
+      color: #2e5f4d;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .form-text a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .left-side {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
-
-<!-- Judul di Tengah -->
-<!-- Judul dan Logo di Tengah -->
-<div class="text-center my-4">
-  <h1 class="mb-3">TOKO SEMBAKO</h1>
-  <img src="LogoSembakoKu.png" alt="SembakoKu" height="70px">
-</div>
-
-<div class="container-fluid">
-  <div class="row vh-100">
-
-    <!-- Kiri: Gambar Produk -->
-    <div class="col-md-6 left-section d-flex align-items-center">
-      <div class="row w-100 g-3">
-        <?php
-          for ($i = 1; $i <= 6; $i++) {
-              echo "<div class='col-4'><img src='mantap{$i}.jpeg' class='product-img' alt='Produk $i'></div>";
-          }
-        ?>
+  <div class="container-fluid">
+    <div class="row h-100">
+      <!-- Kiri: Gambar Sembako -->
+      <div class="col-md-6 left-side">
+        <img src="sembako-image.png" alt="Ilustrasi Sembako">
       </div>
-    </div>
 
-    <!-- Kanan: Login Form -->
-    <div class="col-md-6 d-flex align-items-center bg-white">
-      <div class="card shadow p-4 login-card">
-        <h3 class="text-center mb-4">Login</h3>
-        <form method="POST" action="login.php">
-          <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" name="username" id="username" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" name="password" id="password" class="form-control" required>
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Login</button>
-          <div class="text-center mt-3">
-            <small>Belum punya akun? <a href="register.php">Daftar sekarang</a></small>
-          </div>
-        </form>
+      <!-- Kanan: Form Login -->
+      <div class="col-md-6 right-side">
+        <div class="login-form text-center">
+          <img src="LogoSembakoKu.png" alt="SembakoKu Logo" class="logo">
+          <h3>Login ke SembakoKu</h3>
+
+          <form action="/login" method="post">
+            <div class="mb-3 text-start">
+              <label for="username" class="form-label">Username / Email</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username atau email" required>
+            </div>
+            <div class="mb-2 text-start">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required>
+            </div>
+            <div class="text-end mb-3">
+              <a href="#" class="form-text">Lupa Password?</a>
+            </div>
+            <button type="submit" class="btn btn-login w-100">Login</button>
+            <p class="mt-3 mb-0">Belum punya akun? <a href="/register">Daftar Sekarang</a></p>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
