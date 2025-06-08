@@ -41,9 +41,6 @@
 
                 <!-- Icons + Auth Buttons -->
                 <div class="d-flex align-items-center gap-3">
-                    <a href="#" class="text-success fs-5"><i class="bi bi-house-door-fill"></i></a>
-                    <a href="#" class="text-success fs-5"><i class="bi bi-heart-fill"></i></a>
-                    <a href="#" class="text-success fs-5"><i class="bi bi-cart-fill"></i></a>
                     <a href="#" class="text-dark fw-semibold text-decoration-none">Register</a>
                     <button class="btn btn-success rounded-pill px-3">Login</button>
                 </div>
@@ -58,13 +55,13 @@
 
                 <!-- Tentang SembakoKu -->
                 <div class="col-md-4 mb-3">
-                    <h5 class="text-success">SembakoKu</h5>
+                    <h5 class="fw-bold text-success">SembakoKu</h5>
                     <p class="small">Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga terbaik dan pengiriman cepat.</p>
                 </div>
 
                 <!-- Link Navigasi -->
                 <div class="col-md-4 mb-3">
-                    <h6 class="text-dark">Navigasi</h6>
+                    <h6 class="fw-bold">Navigasi</h6>
                     <ul class="list-unstyled small">
                         <li><a href="#" class="text-decoration-none text-dark">Beranda</a></li>
                         <li><a href="#" class="text-decoration-none text-dark">Produk</a></li>
@@ -75,7 +72,7 @@
 
                 <!-- Kontak & Sosial Media -->
                 <div class="col-md-4 mb-3">
-                    <h6 class="text-dark">Hubungi Kami</h6>
+                    <h6 class="fw-bold">Hubungi Kami</h6>
                     <p class="small mb-1"><i class="bi bi-envelope-fill me-2"></i> support@sembakoku.id</p>
                     <p class="small mb-1"><i class="bi bi-telephone-fill me-2"></i> +62 812-3456-7890</p>
                     <div>
