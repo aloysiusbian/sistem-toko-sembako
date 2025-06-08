@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Login </title>
+  <title>Login</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -17,18 +17,19 @@
       background-color: #f8f9fa;
       padding: 20px;
     }
-
     .login-card {
       max-width: 400px;
       margin: auto;
     }
-
     .vh-100 {
       min-height: 100vh;
     }
   </style>
 </head>
 <body>
+
+<!-- Judul di Tengah -->
+<h1 class="text-center my-4">TOKO SEMBAKO</h1>
 
 <div class="container-fluid">
   <div class="row vh-100">
@@ -37,7 +38,6 @@
     <div class="col-md-6 left-section d-flex align-items-center">
       <div class="row w-100 g-3">
         <?php
-          // Tampilkan 6 gambar
           for ($i = 1; $i <= 6; $i++) {
               echo "<div class='col-4'><img src='mantap{$i}.jpeg' class='product-img' alt='Produk $i'></div>";
           }
@@ -54,25 +54,21 @@
             <label for="username" class="form-label">Username</label>
             <input type="text" name="username" id="username" class="form-control" required>
           </div>
-
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
             <input type="password" name="password" id="password" class="form-control" required>
           </div>
-
           <button type="submit" class="btn btn-primary w-100">Login</button>
-
           <div class="text-center mt-3">
-            <small>Belum punya akun? <a href="#">Daftar sekarang</a></small>
+            <small>Belum punya akun? <a href="register.php">Daftar sekarang</a></small>
           </div>
         </form>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- Bootstrap JS (Optional) -->
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
