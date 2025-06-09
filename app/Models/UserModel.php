@@ -6,15 +6,15 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = 'register'; 
-    protected $primaryKey = 'id';  
+    protected $table = 'user'; 
+    protected $primaryKey = 'email';  
 
-    protected $allowedFields = ['id', 'password']; 
+    protected $allowedFields = ['email', 'password']; 
 
     public function simpan($data)
     {
         $this->save([
-            'id' => $data['id'],
+            'email' => $data['email'],
             'password' => $data['password']
         ]);
     }
