@@ -26,7 +26,6 @@
             font-weight: 400;
         }
     </style>
-
 </head>
 
 <body>
@@ -45,15 +44,18 @@
                     <button class="btn btn-success rounded-end-pill px-4" type="submit">Search</button>
                 </form>
 
-                <!-- Icons + Auth Buttons -->
+                <!-- Account & Cart Buttons -->
                 <div class="d-flex align-items-center gap-3">
-                    <a href="#" class="text-dark fw-semibold text-decoration-none">Register</a>
-                    <button class="btn btn-success rounded-pill px-3">Login</button>
+                    <a href="#" class="btn btn-success rounded-pill px-3 d-flex align-items-center">
+                        <i class="bi bi-cart-fill me-2"></i> Keranjang
+                    </a>
+                    <a href="#" class="btn btn-outline-success rounded-pill px-3 d-flex align-items-center">
+                        <i class="bi bi-person-fill me-2"></i> Account
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
-
 
     <footer class="bg-light text-dark mt-5 pt-4 pb-3 border-top">
         <div class="container">
@@ -95,7 +97,6 @@
             </div>
         </div>
     </footer>
-
 
 </body>
 
