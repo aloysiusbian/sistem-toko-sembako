@@ -31,30 +31,30 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid d-flex justify-content-between align-items-center px-4">
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-white border-bottom py-3 fixed-top">
+            <div class="container d-flex justify-content-between align-items-center">
                 <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="LogoSembakoKu.png" alt="SembakoKu" height="45" style="padding-left: 50px;" class="me-2">
+                    <img src="LogoSembakoKu.png" alt="Logo" height="40" class="me-2">
                 </a>
-
                 <!-- Search Bar -->
-                <form class="d-flex flex-grow-1 mx-4" style="max-width: 500px;">
-                    <input class="form-control rounded-start-pill" type="search" placeholder="Search">
+                <form class="d-flex w-50 me-3">
+                    <input class="form-control rounded-start-pill" type="search" placeholder="Search" />
                     <button class="btn btn-success rounded-end-pill px-4" type="submit">Search</button>
                 </form>
-
                 <!-- Account & Cart Buttons -->
-                <div class="d-flex align-items-center gap-3">
-                    <a href="#" class="btn btn-success rounded-pill px-3 d-flex align-items-center">
-                        <i class="bi bi-cart-fill me-2"></i> Keranjang
+                <div>
+                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
+                        <i class="bi bi-cart-fill me-1"></i> Keranjang
                     </a>
-                    <a href="#" class="btn btn-outline-success rounded-pill px-3 d-flex align-items-center">
-                        <i class="bi bi-person-fill me-2"></i> Account
+                    <a href="#" class="btn btn-success rounded-pill">
+                        <i class="bi bi-person-fill me-1"></i> Account
                     </a>
                 </div>
             </div>
         </nav>
+        <br><br>
     </header>
 
     <footer class="bg-light text-dark mt-5 pt-4 pb-3 border-top">

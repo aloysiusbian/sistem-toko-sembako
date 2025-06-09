@@ -53,7 +53,6 @@
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="LogoSembakoKu.png" alt="Logo" height="40" class="me-2">
-        <span class="fw-bold text-success fs-4">SembakoKu</span>
       </a>
       <form class="d-flex w-50 me-3">
         <input class="form-control rounded-start-pill" type="search" placeholder="Search" />
