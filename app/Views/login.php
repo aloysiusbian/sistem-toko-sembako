@@ -2,13 +2,10 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - SembakoKu</title>
 
-  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Google Fonts: Lato -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -32,9 +29,17 @@
       padding: 2rem;
     }
 
-    .left-side img {
-      max-width: 100%;
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      justify-items: center;
+    }
+
+    .image-grid img {
+      width: 200px;
       height: auto;
+      object-fit: contain;
     }
 
     .right-side {
@@ -102,15 +107,23 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container-fluid">
     <div class="row h-100">
-      <!-- Kiri: Gambar Sembako -->
+      <!-- Kolom Kiri -->
       <div class="col-md-6 left-side">
-        <img src="sembako-image.png" alt="Ilustrasi Sembako">
+        <div class="image-grid">
+          <img src="mantap1.jpeg" alt="Gambar 1">
+          <img src="mantap2.jpeg" alt="Gambar 2">
+          <img src="mantap3.jpeg" alt="Gambar 3">
+          <img src="mantap4.jpeg" alt="Gambar 4">
+          <img src="mantap5.jpeg" alt="Gambar 5">
+          <img src="mantap6.jpeg" alt="Gambar 6">
+        </div>
       </div>
 
-      <!-- Kanan: Form Login -->
+      <!-- Kolom Kanan -->
       <div class="col-md-6 right-side">
         <div class="login-form text-center">
           <img src="LogoSembakoKu.png" alt="SembakoKu Logo" class="logo">
@@ -119,11 +132,13 @@
           <form action="/login" method="post">
             <div class="mb-3 text-start">
               <label for="username" class="form-label">Username / Email</label>
-              <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username atau email" required>
+              <input type="text" class="form-control" id="username" name="username"
+                placeholder="Masukkan username atau email" required>
             </div>
             <div class="mb-2 text-start">
               <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required>
+              <input type="password" class="form-control" id="password" name="password"
+                placeholder="Masukkan password" required>
             </div>
             <div class="text-end mb-3">
               <a href="#" class="form-text">Lupa Password?</a>
@@ -136,7 +151,6 @@
     </div>
   </div>
 
-  <!-- Bootstrap JS (optional) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
