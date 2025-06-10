@@ -120,15 +120,26 @@
       <div class="col-md-6 right-side">
         <div class="register-form text-center">
           <h3>Daftar Akun Baru</h3>
+          <?php if (isset($errors) && !empty($errors)) : ?>
+  <div class="alert alert-danger text-start">
+    <ul class="mb-0">
+      <?php foreach ($errors as $error): ?>
+        <li><?= esc($error) ?></li>
+      <?php endforeach ?>
+    </ul>
+  </div>
+<?php endif; ?>
+
 
           <form action="/register" method="post">
+            <?= csrf_field() ?>
             <div class="mb-3 text-start">
               <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
               <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan nama lengkap" required>
             </div>
             <div class="mb-3 text-start">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email aktif" required>
+              <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan email aktif" required>
             </div>
             <div class="mb-3 text-start">
               <label for="username" class="form-label">Username</label>

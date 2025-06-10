@@ -6,32 +6,27 @@ use App\Models\UserModel;
 
 class RegisterController extends BaseController
 {
-public function index() {
-    $model = new UserModel();
+    public function index()
+    {
+        // Jika request POST (form dikirim)
+        if ($this->request->getMethod() === 'post') {
+            $post = $this->request->getPost(['username','email','password','nama_lengkap']);
 
-    if ($this->request->getMethod() === 'post') {
-        $rules = [
-            'nama_lengkap' => 'required',  // Pastikan nama field sama
-            'email' => 'required|valid_email|is_unique[user.email]',
-            'username' => 'required',
-            'password' => 'required|min_length[6]',
-            'confirm_password' => 'required|matches[password]'
-        ];
+            $model = model(UserModel::class);
 
-        $data = [
-            'email' => $this->request->getPost('email'),
-            'username' => $this->request->getPost('username'),
-            'nama_lengkap' => $this->request->getPost('nama_lengkap'), // Sesuai dengan name di form
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
-        ];
+            // Simpan ke database
+            if (!$model->insert($post)) {
+                // Jika gagal, tampilkan error ke view
+                return view('register', [
+                    'errors' => $model->errors()
+                ]);
+            }
 
-        if ($model->insert($data)) {
-            return redirect()->to('/login')->with('success', 'Registrasi berhasil!');
-        } else {
-            return redirect()->back()->withInput()->with('errors', $model->errors());
+            // Redirect setelah sukses daftar (misal ke login)
+            return redirect()->to('/login');
         }
-    }
 
-    return view('register');
-}
+        // Jika GET, tampilkan form register
+        return view('register');
+    }
 }
