@@ -70,30 +70,20 @@
   </nav>
   <br><br>
 
-  <!-- Product Detail -->
   <div class="container my-5">
     <div class="row align-items-center">
-      <!-- Product Image -->
+      <!-- Gambar produk -->
       <div class="col-md-6">
         <div class="main-image">
-          <img src="beras.png" alt="Beras" class="img-fluid">
+          <img src="<?= base_url($produk['gambar']) ?>" alt="<?= esc($produk['nama_produk']) ?>" class="img-fluid">
         </div>
       </div>
 
-      <!-- Product Info -->
+      <!-- Info produk -->
       <div class="col-md-6 mt-4 mt-md-0">
-        <h2 class="fw-bold">Beras</h2>
-        <div class="price mb-3">Rp 19,000</div>
-        <p class="text-muted">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </p>
-        <p class="text-muted">
-          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-          unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages.
-        </p>
+        <h2 class="fw-bold"><?= esc($produk['nama_produk']) ?></h2>
+        <div class="price mb-3">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></div>
+        <p class="text-muted"><?= esc($produk['deskripsi']) ?></p>
 
         <hr />
         <button class="btn btn-success w-100 py-2 fs-5">Add to Cart</button>
