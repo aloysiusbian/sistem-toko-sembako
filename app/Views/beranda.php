@@ -71,7 +71,7 @@
                     <div class="card-body text-center">
                         <p class="fw-bold mb-1"><?= $produk['nama_produk'] ?></p>
                         <h6 class="fw-bold mb-2 text-success">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></h6>
-                        <a href="<?= base_url('produk/detail/' . $produk['id']) ?>" class="btn btn-success rounded-pill px-4">Details</a>
+                        <a href="<?= 'produk/detail/' . $produk['id'] ?>" class="btn btn-success rounded-pill px-4">Details</a>
                     </div>
                 </div>
             </div>
