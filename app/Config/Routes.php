@@ -9,5 +9,5 @@ $routes->get('/', 'Home::index');
 $routes->get('/beranda', 'BerandaController::index');
 $routes->get('/produk', 'ProdukController::index');
 $routes->get('/login', 'loginController::index');
-$routes->get('/register', 'userController::index');
+$routes->get('/register', 'registerController::index');
 

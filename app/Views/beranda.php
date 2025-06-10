@@ -57,6 +57,40 @@
         <br><br>
     </header>
 
+    <!-- Produk -->
+    <div class="container mt-5 pt-4">
+        <div class="row g-4">
+            <!-- Loop produk mulai di sini -->
+            <div class="col-md-3" *ngFor="let produk of produkList">
+                <div class="col-md-6">
+                    <div class="main-image">
+                        <img src="beras.png" alt="Beras" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <small class="text-muted">Vegetable</small>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <strong>₹ 40.00</strong><br>
+                                <small class="text-decoration-line-through text-muted">₹ 60.00</small>
+                            </div>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                        <p class="mt-2 mb-1">Tomato</p>
+                        <div class="input-group input-group-sm">
+                            <button class="btn btn-success">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Salin blok col-md-3 ini untuk tiap produk -->
+    </div>
+    </div>
+
     <footer class="bg-light text-dark mt-5 pt-4 pb-3 border-top">
         <div class="container">
             <div class="row">
