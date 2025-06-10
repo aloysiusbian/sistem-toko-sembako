@@ -36,18 +36,18 @@ class RegisterController extends BaseController
         helper('form');
         // Memeriksa apakah melakukan submit data atau tidak.
         if (!$this->request->is('post')) {
-            return view('/register');
+            return view('register');
         }
         // Mengambil data yang disubmit dari form
         $post = $this->request->getPost([
-            'nim',
-            'nama',
-            "praktikum",
-            "ipk"
+            'username',
+            'password',
+            "email",
+            "nama_lengkap"
         ]);
         // Mengakses Model untuk menyimpan data
         $model = model(UserModel::class);
         $model->register($post);
-        return view('/login');
+        return view('login');
     }
 }
