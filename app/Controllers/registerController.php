@@ -15,7 +15,7 @@ class RegisterController extends BaseController
             $model = model(UserModel::class);
 
             // Simpan ke database
-            if (!$model->insert($post)) {
+            if (!$model->register($post)) {
                 // Jika gagal, tampilkan error ke view
                 return view('register', [
                     'errors' => $model->errors()
@@ -28,5 +28,25 @@ class RegisterController extends BaseController
 
         // Jika GET, tampilkan form register
         return view('register');
+    }
+
+    public function register()
+    {
+        helper('form');
+        // Memeriksa apakah melakukan submit data atau tidak.
+        if (!$this->request->is('post')) {
+            return view('/register');
+        }
+        // Mengambil data yang disubmit dari form
+        $post = $this->request->getPost([
+            'nim',
+            'nama',
+            "praktikum",
+            "ipk"
+        ]);
+        // Mengakses Model untuk menyimpan data
+        $model = model(UserModel::class);
+        $model->register($post);
+        return view('/login');
     }
 }
