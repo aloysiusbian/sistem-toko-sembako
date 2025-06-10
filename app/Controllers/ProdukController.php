@@ -22,6 +22,7 @@ class ProdukController extends BaseController
 
         return view('produk', ['produk' => $produk]);
     }
+    
     public function mantap($id)
 {
     // Asumsikan kamu pakai model bernama ProdukModel

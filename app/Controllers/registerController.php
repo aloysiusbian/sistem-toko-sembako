@@ -29,6 +29,7 @@ class RegisterController extends BaseController
         // Jika GET, tampilkan form register
         return view('register');
     }
+    
 
     public function register()
     {

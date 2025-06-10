@@ -120,16 +120,7 @@
       <div class="col-md-6 right-side">
         <div class="register-form text-center">
           <h3>Daftar Akun Baru</h3>
-          <?php if (isset($errors) && !empty($errors)) : ?>
-  <div class="alert alert-danger text-start">
-    <ul class="mb-0">
-      <?php foreach ($errors as $error): ?>
-        <li><?= esc($error) ?></li>
-      <?php endforeach ?>
-    </ul>
-  </div>
-<?php endif; ?>
-
+          
 
           <form action="/register" method="post">
             <?= csrf_field() ?>
