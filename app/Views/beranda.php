@@ -57,39 +57,29 @@
         <br><br>
     </header>
 
-    <!-- Produk -->
-    <div class="container mt-5 pt-4">
-        <div class="row g-4">
-            <!-- Loop produk mulai di sini -->
-            <div class="col-md-3" *ngFor="let produk of produkList">
-                <div class="col-md-6">
-                    <div class="main-image">
-                        <img src="beras.png" alt="Beras" class="img-fluid">
-                    </div>
-                    <div class="p-2">
-                        <small class="text-muted">Vegetable</small>
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <strong>₹ 40.00</strong><br>
-                                <small class="text-decoration-line-through text-muted">₹ 60.00</small>
-                            </div>
-                            <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                        </div>
-                        <p class="mt-2 mb-1">Tomato</p>
-                        <div class="input-group input-group-sm">
-                            <button class="btn btn-success">Details</button>
-                        </div>
+    <div class="container my-5 pt-4">
+        <h2 class="fw-bold mb-4 text-center text-success">Produk Kami</h2>
+    </div>
+
+
+    <div class="container my-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <?php foreach ($daftarProduk as $produk): ?>
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="<?= $produk['gambar'] ?>" class="card-img-top" alt="<?= $produk['nama_produk'] ?>" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <p class="fw-bold mb-1"><?= $produk['nama_produk'] ?></p>
+                        <h6 class="fw-bold mb-2 text-success">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></h6>
+                        <a href="<?= base_url('produk/detail/' . $produk['id']) ?>" class="btn btn-success rounded-pill px-4">Details</a>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endforeach; ?>
     </div>
-    </div>
-    <!-- Salin blok col-md-3 ini untuk tiap produk -->
-    </div>
-    </div>
+</div>
+
+
 
     <footer class="bg-light text-dark mt-5 pt-4 pb-3 border-top">
         <div class="container">

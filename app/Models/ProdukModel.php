@@ -1,13 +1,20 @@
 <?php
-class ProdukModel {
 
-    protected $table = 'produk';
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class ProdukModel extends Model
+{
+    protected $table = 'produk'; // Nama tabel di database
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['id', 'nama_produk', 'deskripsi', 'harga', 'stok'];
+    protected $allowedFields = ['nama_produk', 'harga', 'deskripsi', 'gambar'];
 
-    public function get_produk($id) {
-        
-          
+    public function getAllProduk()
+    {
+        $daftarProduk = $this->findAll();
+        return $daftarProduk;
     }
+
 }
