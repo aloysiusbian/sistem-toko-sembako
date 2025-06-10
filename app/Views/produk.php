@@ -75,7 +75,7 @@
       <!-- Gambar produk -->
       <div class="col-md-6">
         <div class="main-image">
-          <img src="<?= base_url($produk['gambar']) ?>" alt="<?= esc($produk['nama_produk']) ?>" class="img-fluid">
+          <img src="<?= $produk['gambar']?>" alt="<?= esc($produk['nama_produk']) ?>" class="img-fluid">
         </div>
       </div>
 
