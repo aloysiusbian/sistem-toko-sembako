@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - SembakoKu</title>
 
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -29,17 +33,9 @@
       padding: 2rem;
     }
 
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      justify-items: center;
-    }
-
-    .image-grid img {
-      width: 200px;
+    .left-side img {
+      max-width: 100%;
       height: auto;
-      object-fit: contain;
     }
 
     .right-side {
@@ -111,19 +107,11 @@
 <body>
   <div class="container-fluid">
     <div class="row h-100">
-      <!-- Kolom Kiri -->
+     
       <div class="col-md-6 left-side">
-        <div class="image-grid">
-          <img src="mantap1.jpeg" alt="Gambar 1">
-          <img src="mantap2.jpeg" alt="Gambar 2">
-          <img src="mantap3.jpeg" alt="Gambar 3">
-          <img src="mantap4.jpeg" alt="Gambar 4">
-          <img src="mantap5.jpeg" alt="Gambar 5">
-          <img src="mantap6.jpeg" alt="Gambar 6">
-        </div>
+        <img src="sembako-image.png" alt="Ilustrasi Sembako">
       </div>
 
-      <!-- Kolom Kanan -->
       <div class="col-md-6 right-side">
         <div class="login-form text-center">
           <img src="LogoSembakoKu.png" alt="SembakoKu Logo" class="logo">
@@ -137,8 +125,8 @@
             </div>
             <div class="mb-2 text-start">
               <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" name="password"
-                placeholder="Masukkan password" required>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password"
+                required>
             </div>
             <div class="text-end mb-3">
               <a href="#" class="form-text">Lupa Password?</a>
@@ -151,6 +139,8 @@
     </div>
   </div>
 
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

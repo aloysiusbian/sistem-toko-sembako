@@ -123,8 +123,8 @@
 
           <form action="/register" method="post">
             <div class="mb-3 text-start">
-              <label for="nama" class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+              <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan nama lengkap" required>
             </div>
             <div class="mb-3 text-start">
               <label for="email" class="form-label">Email</label>
@@ -138,10 +138,7 @@
               <label for="password" class="form-label">Password</label>
               <input type="password" class="form-control" id="password" name="password" placeholder="Buat password" required>
             </div>
-            <div class="mb-4 text-start">
-              <label for="confirm_password" class="form-label">Konfirmasi Password</label>
-              <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Ulangi password" required>
-            </div>
+      
             <button type="submit" class="btn btn-register w-100">Daftar</button>
             <p class="mt-3 mb-0">Sudah punya akun? <a href="/login">Login di sini</a></p>
           </form>
