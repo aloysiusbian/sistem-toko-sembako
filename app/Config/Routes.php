@@ -9,12 +9,8 @@ $routes->get('/', 'Home::index');
 $routes->get('/beranda', 'BerandaController::index');
 $routes->get('/produk', 'ProdukController::index');
 $routes->get('/login', 'loginController::index');
-<<<<<<< HEAD
-$routes->match(['get', 'post'], '/register', 'RegisterController::index');
-=======
-$routes->match(['get', 'post'], 'register', 'RegisterController::index');
+$routes->match(['get', 'post'], '/register', 'RegisterController::register');
+// $routes->match(['get', 'post'], 'register', 'RegisterController::index');
 $routes->get('produk/detail/(:any)', 'ProdukController::detail/$1');
-
->>>>>>> 216b21af668ef765397492e34ccfef990b09af42
 
 
