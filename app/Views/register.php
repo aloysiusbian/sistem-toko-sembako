@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register - SembakoKu</title>
 
   <!-- Bootstrap 5 -->
@@ -25,11 +26,11 @@
     }
 
     .left-side {
-      background-color: #e5f4ec;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
+      background-image: url('background2.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      position: relative;
     }
 
     .left-side img {
@@ -105,6 +106,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Logo di pojok kiri atas -->
   <img src="LogoSembakoKu.png" alt="SembakoKu Logo" class="logo-top" style="height: 50px; width: fit-content; padding-left: 20px;">
@@ -113,16 +115,16 @@
     <div class="row h-100">
       <!-- Kiri: Gambar Sembako -->
       <div class="col-md-6 left-side">
-        <img src="sembako-image.png" alt="Ilustrasi Sembako">
+
       </div>
 
       <!-- Kanan: Form Register -->
       <div class="col-md-6 right-side">
         <div class="register-form text-center">
           <h3>Daftar Akun Baru</h3>
-          
 
-          <form action="/register" method="post">
+
+          <form action="/" method="post">
             <?= csrf_field() ?>
             <div class="mb-3 text-start">
               <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
@@ -140,7 +142,7 @@
               <label for="password" class="form-label">Password</label>
               <input type="password" class="form-control" id="password" name="password" placeholder="Buat password" required>
             </div>
-      
+
             <button type="submit" class="btn btn-register w-100">Daftar</button>
             <p class="mt-3 mb-0">Sudah punya akun? <a href="/login">Login di sini</a></p>
           </form>
@@ -152,4 +154,5 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

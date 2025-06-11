@@ -9,6 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+<<<<<<< HEAD
   <style>
     body, html {
       margin: 0;
@@ -16,11 +17,22 @@
       height: 100%;
       font-family: 'Lato', sans-serif;
     }
+=======
+      <style>
+        body,
+        html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          font-family: 'Lato', sans-serif;
+        }
+>>>>>>> e15f6dd74d8c716301cc5565c3c16258f3824f6b
 
     .container-fluid {
       height: 100vh;
     }
 
+<<<<<<< HEAD
     .left-side {
       background-image: url('backgroundfix.png');
       background-size: cover;
@@ -28,6 +40,15 @@
       height: 100%;
       position: relative;
     }
+=======
+        .left-side {
+          background-image: url('background2.jpg');
+          background-size: cover;
+          background-position: center;
+          height: 100%;
+          position: relative;
+        }
+>>>>>>> e15f6dd74d8c716301cc5565c3c16258f3824f6b
 
     .left-side .logo {
       position: absolute;
@@ -74,6 +95,7 @@
       color: #a0b3aa;
     }
 
+<<<<<<< HEAD
     .btn-login {
       background-color: #2e5f4d;
       color: white;
@@ -81,6 +103,15 @@
       padding: 10px;
       font-weight: bold;
     }
+=======
+        .btn-login {
+          background-color: #198754;
+          color: white;
+          border-radius: 30px;
+          padding: 10px;
+          font-weight: bold;
+        }
+>>>>>>> e15f6dd74d8c716301cc5565c3c16258f3824f6b
 
     .btn-login:hover {
       background-color: #264e3f;
@@ -96,6 +127,7 @@
       text-decoration: underline;
     }
 
+<<<<<<< HEAD
     .alert {
       border-radius: 12px;
     }
@@ -127,6 +159,54 @@
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
               <?= session()->getFlashdata('error') ?>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+=======
+        @media (max-width: 768px) {
+          .left-side {
+            display: none;
+          }
+        }
+
+        .logo-top {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: 60px;
+          z-index: 999;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div class="container-fluid">
+        <div class="row h-100">
+          <!-- Bagian Kiri -->
+          <br>
+          <div class="col-md-6 left-side">
+            <img src="LogoSembakoKu.png" alt="SembakoKu Logo" class="logo-top" style="height: 50px; width: fit-content; padding-left: 20px;">
+          </div>
+
+          <!-- Bagian Kanan -->
+          <div class="col-md-6 right-side">
+            <div class="login-form">
+
+              <h3>Login ke SembakoKu</h3>
+
+              <form action="/beranda" method="get">
+                <div class="mb-3 text-start">
+                  <label for="username" class="form-label">Username / Email</label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username atau email" required>
+                </div>
+                <div class="mb-2 text-start">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required>
+                </div>
+                <div class="text-end mb-3">
+                  <a href="#" class="form-text">Lupa Password?</a>
+                </div>
+                <button type="submit" class="btn btn-login w-100">Login</button>
+                <p class="mt-3 mb-0">Belum punya akun? <a href="/">Daftar Sekarang</a></p>
+              </form>
+>>>>>>> e15f6dd74d8c716301cc5565c3c16258f3824f6b
             </div>
           <?php endif; ?>
 
@@ -179,6 +259,7 @@
     </div>
   </div>
 
+<<<<<<< HEAD
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Auto close alert setelah 5 detik
@@ -194,3 +275,6 @@
 </body>
 
 </html>
+=======
+    </html>
+>>>>>>> e15f6dd74d8c716301cc5565c3c16258f3824f6b
