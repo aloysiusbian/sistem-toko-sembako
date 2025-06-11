@@ -45,7 +45,7 @@
                 </form>
                 <!-- Account & Cart Buttons -->
                 <div>
-                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
+                    <a href="/keranjang" class="btn btn-success rounded-pill me-2">
                         <i class="bi bi-cart-fill me-1"></i> Keranjang
                     </a>
                     <a href="#" class="btn btn-success rounded-pill">
@@ -63,21 +63,21 @@
 
 
     <div class="container my-5">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-        <?php foreach ($daftarProduk as $produk): ?>
-            <div class="col">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="<?= $produk['gambar'] ?>" class="card-img-top" alt="<?= $produk['nama_produk'] ?>" style="height: 200px; object-fit: cover;">
-                    <div class="card-body text-center">
-                        <p class="fw-bold mb-1"><?= $produk['nama_produk'] ?></p>
-                        <h6 class="fw-bold mb-2 text-success">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></h6>
-                        <a href="<?= 'produk/detail/' . $produk['id'] ?>" class="btn btn-success rounded-pill px-4">Details</a>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+            <?php foreach ($daftarProduk as $produk): ?>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="<?= $produk['gambar'] ?>" class="card-img-top" alt="<?= $produk['nama_produk'] ?>" style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <p class="fw-bold mb-1"><?= $produk['nama_produk'] ?></p>
+                            <h6 class="fw-bold mb-2 text-success">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></h6>
+                            <a href="<?= 'produk/detail/' . $produk['id'] ?>" class="btn btn-success rounded-pill px-4">Details</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
-</div>
 
 
 
