@@ -130,6 +130,14 @@
             </div>
           <?php endif; ?>
 
+          <!-- Menampilkan pesan error login -->
+          <?php if (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <?= session()->getFlashdata('error') ?>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          <?php endif; ?>
+
           <!-- Form Login -->
           <form action="/login" method="post">
             <?= csrf_field() ?>
