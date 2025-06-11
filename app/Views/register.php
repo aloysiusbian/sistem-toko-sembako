@@ -124,7 +124,7 @@
           <h3>Daftar Akun Baru</h3>
 
 
-          <form action="/register" method="post">
+          <form action="/" method="post">
             <?= csrf_field() ?>
             <div class="mb-3 text-start">
               <label for="nama_lengkap" class="form-label">Nama Lengkap</label>

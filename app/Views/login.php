@@ -128,7 +128,7 @@
 
               <h3>Login ke SembakoKu</h3>
 
-              <form action="/login" method="post">
+              <form action="/beranda" method="get">
                 <div class="mb-3 text-start">
                   <label for="username" class="form-label">Username / Email</label>
                   <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username atau email" required>

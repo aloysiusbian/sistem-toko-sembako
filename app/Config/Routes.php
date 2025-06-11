@@ -13,5 +13,12 @@ $routes->get('/login', 'UserController::login');
 
 $routes->get('produk/detail/(:any)', 'ProdukController::detail/$1');
 
-$routes->get('produk/detail/(:any)', 'ProdukController::detail/$1');
+$routes->group('keranjang', function($routes) {
+    $routes->get('/', 'KeranjangController::index');
+    $routes->post('add', 'KeranjangController::add');
+    $routes->post('update/(:num)', 'KeranjangController::update/$1');
+    $routes->post('remove/(:num)', 'KeranjangController::remove/$1');
+});
+
+// Also update the navbar cart link to point to /keranjang
 

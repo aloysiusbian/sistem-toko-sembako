@@ -75,7 +75,7 @@
       <!-- Gambar produk -->
       <div class="col-md-6">
         <div class="main-image">
-          <img src="<?= $produk['gambar']?>" alt="<?= esc($produk['nama_produk']) ?>" class="img-fluid">
+          <img src="<?= $produk['gambar'] ?>" alt="<?= esc($produk['nama_produk']) ?>" class="img-fluid">
         </div>
       </div>
 
@@ -85,8 +85,15 @@
         <div class="price mb-3">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></div>
         <p class="text-muted"><?= esc($produk['deskripsi']) ?></p>
 
-        <hr />
-        <button class="btn btn-success w-100 py-2 fs-5">Add to Cart</button>
+        <hr/>
+
+        <form action="/keranjang/add" method="post">
+          <?= csrf_field() ?>
+          <input type="hidden" name="produk_id" value="<?= $produk['id'] ?>">
+          <input type="hidden" name="quantity" value="1">
+          <button type="submit" class="btn btn-success w-100 py-2 fs-5">Add to Cart</button>
+        </form>
+        
       </div>
     </div>
   </div>
