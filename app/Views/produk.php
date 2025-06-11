@@ -52,7 +52,7 @@
   <nav class="navbar navbar-light bg-white border-bottom py-3 fixed-top">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="LogoSembakoKu.png" alt="Logo" height="40" class="me-2">
+        <img src= <?=base_url("LogoSembakoKu.png")?> alt="Logo" height="40" class="me-2">
       </a>
       <form class="d-flex w-50 me-3">
         <input class="form-control rounded-start-pill" type="search" placeholder="Search" />
@@ -75,7 +75,11 @@
       <!-- Gambar produk -->
       <div class="col-md-6">
         <div class="main-image">
+<<<<<<< HEAD
           <img src="<?= $produk['gambar']?>" alt="<?= esc($produk['nama_produk']) ?>" class="img-fluid">
+=======
+          <img src="<?= base_url($produk['gambar'])?>" alt="<?= esc($produk['nama_produk']) ?>" class="img-fluid">
+>>>>>>> 72bdcf0078002e9d45539bf8d3b52a6994a13b70
         </div>
       </div>
 
