@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use CodeIgniter\Config\View;
 
 class RegisterController extends BaseController
 {
@@ -48,6 +49,6 @@ class RegisterController extends BaseController
         // Mengakses Model untuk menyimpan data
         $model = model(UserModel::class);
         $model->register($post);
-        return view('login');
+        return View('login');
     }
 }
