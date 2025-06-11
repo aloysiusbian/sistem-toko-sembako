@@ -10,7 +10,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
       <style>
-        body, html {
+        body,
+        html {
           margin: 0;
           padding: 0;
           height: 100%;
@@ -22,7 +23,7 @@
         }
 
         .left-side {
-          background-image: url('backgroundfix.png');
+          background-image: url('background2.jpg');
           background-size: cover;
           background-position: center;
           height: 100%;
@@ -75,7 +76,7 @@
         }
 
         .btn-login {
-          background-color: #2e5f4d;
+          background-color: #198754;
           color: white;
           border-radius: 30px;
           padding: 10px;
@@ -101,6 +102,14 @@
             display: none;
           }
         }
+
+        .logo-top {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: 60px;
+          z-index: 999;
+        }
       </style>
     </head>
 
@@ -108,6 +117,7 @@
       <div class="container-fluid">
         <div class="row h-100">
           <!-- Bagian Kiri -->
+          <br>
           <div class="col-md-6 left-side">
             <img src="LogoSembakoKu.png" alt="SembakoKu Logo" class="logo-top" style="height: 50px; width: fit-content; padding-left: 20px;">
           </div>
@@ -115,7 +125,7 @@
           <!-- Bagian Kanan -->
           <div class="col-md-6 right-side">
             <div class="login-form">
-            
+
               <h3>Login ke SembakoKu</h3>
 
               <form action="/login" method="post">
@@ -123,7 +133,7 @@
                   <label for="username" class="form-label">Username / Email</label>
                   <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username atau email" required>
                 </div>
-                <div class="mb-2 text-start"> 
+                <div class="mb-2 text-start">
                   <label for="password" class="form-label">Password</label>
                   <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required>
                 </div>
@@ -131,7 +141,7 @@
                   <a href="#" class="form-text">Lupa Password?</a>
                 </div>
                 <button type="submit" class="btn btn-login w-100">Login</button>
-                <p class="mt-3 mb-0">Belum punya akun? <a href="/register">Daftar Sekarang</a></p>
+                <p class="mt-3 mb-0">Belum punya akun? <a href="/">Daftar Sekarang</a></p>
               </form>
             </div>
           </div>
