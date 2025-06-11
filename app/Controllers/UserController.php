@@ -7,8 +7,9 @@ use CodeIgniter\Config\View;
 
 class UserController extends BaseController
 {
-    public function index()
+    public function login()
     {
+        return view('login');
     }
     
 

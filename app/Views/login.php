@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    body, html {
+    body,
+    html {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -121,31 +122,11 @@
 
           <h3>Login ke SembakoKu</h3>
 
-<<<<<<< HEAD
-              <h3>Login ke SembakoKu</h3>
-
-              <form action="/login" method="post">
-                <div class="mb-3 text-start">
-                  <label for="username" class="form-label">Username / Email</label>
-                  <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username atau email" required>
-                </div>
-                <div class="mb-2 text-start">
-                  <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required>
-                </div>
-                <div class="text-end mb-3">
-                  <a href="#" class="form-text">Lupa Password?</a>
-                </div>
-                <button type="submit" class="btn btn-login w-100">Login</button>
-                <p class="mt-3 mb-0">Belum punya akun? <a href="/">Daftar Sekarang</a></p>
-              </form>
-=======
           <!-- Menampilkan pesan sukses (misal setelah registrasi) -->
           <?php if (session()->getFlashdata('success')): ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
               <?= session()->getFlashdata('success') ?>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
->>>>>>> 72bdcf0078002e9d45539bf8d3b52a6994a13b70
             </div>
           <?php endif; ?>
 
@@ -156,9 +137,9 @@
             <div class="mb-3 text-start">
               <label for="username" class="form-label">Username / Email</label>
               <input type="text" class="form-control <?= session('errors.username') ? 'is-invalid' : '' ?>"
-                     id="username" name="username"
-                     placeholder="Masukkan username atau email"
-                     value="<?= old('username') ?>" required>
+                id="username" name="username"
+                placeholder="Masukkan username atau email"
+                value="<?= old('username') ?>" required>
               <?php if (session('errors.username')): ?>
                 <div class="invalid-feedback">
                   <?= session('errors.username') ?>
@@ -169,8 +150,8 @@
             <div class="mb-2 text-start">
               <label for="password" class="form-label">Password</label>
               <input type="password" class="form-control <?= session('errors.password') ? 'is-invalid' : '' ?>"
-                     id="password" name="password"
-                     placeholder="Masukkan password" required>
+                id="password" name="password"
+                placeholder="Masukkan password" required>
               <?php if (session('errors.password')): ?>
                 <div class="invalid-feedback">
                   <?= session('errors.password') ?>
