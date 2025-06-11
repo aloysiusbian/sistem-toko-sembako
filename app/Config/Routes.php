@@ -8,15 +8,14 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->match(['get', 'post'], '/', 'UserController::register');
 $routes->get('/beranda', 'BerandaController::index');
-$routes->get('/produk', 'ProdukController::index');
-<<<<<<< HEAD
-$routes->match(['get', 'post'], '/login', 'UserController::login');
-=======
-$routes->get('/login', 'loginController::index');
-$routes->post('/login', 'loginController::auth');
-$routes->get('/login', 'UserController::login');
->>>>>>> 72bdcf0078002e9d45539bf8d3b52a6994a13b70
 
+$routes->match(['get', 'post'], '/login', 'UserController::login');
+$routes->get('/login', 'UserController::login');
+$routes->post('/login', 'UserController::auth'); // tetap butuh ini
+$routes->get('/logout', 'UserController::logout');
+
+
+$routes->get('/produk', 'ProdukController::index');
 $routes->get('produk/detail/(:any)', 'ProdukController::detail/$1');
 
 $routes->group('keranjang', function ($routes) {
@@ -26,16 +25,7 @@ $routes->group('keranjang', function ($routes) {
     $routes->post('remove/(:num)', 'KeranjangController::remove/$1');
 });
 
-<<<<<<< HEAD
-$routes->get('/logout', 'UserController::logout');
-
-// Also update the navbar cart link to point to /keranjang
-=======
 
 
-// $routes->match(['get', 'post'], '/register', 'RegisterController::register');
-// Also update the navbar cart link to point to /keranjang
 
 $routes->match(['get', 'post'], '/login', 'UserController::index');
-$routes->post('/login', 'UserController::auth'); // tetap butuh ini
->>>>>>> 72bdcf0078002e9d45539bf8d3b52a6994a13b70
