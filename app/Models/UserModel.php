@@ -19,4 +19,10 @@ class UserModel extends Model
             'nama_lengkap' => $akun['nama_lengkap'],
         ]);
     }
+   public function login($username)
+{
+    return $this->where('username', $username)
+                ->orWhere('email', $username)
+                ->first();
+}
 }
