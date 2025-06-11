@@ -5,10 +5,11 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use CodeIgniter\Config\View;
 
-class RegisterController extends BaseController
+class UserController extends BaseController
 {
-    public function index()
+    public function login(): string
     {
+        return view('login');
     }
     
 
