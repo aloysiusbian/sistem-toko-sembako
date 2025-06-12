@@ -66,9 +66,11 @@
                 <a class="navbar-brand d-flex align-items-center" href="/beranda">
                     <img src="LogoSembakoKu.png" alt="Logo" height="40" class="me-2">
                 </a>
-                
                 <!-- Account & Cart Buttons -->
                 <div>
+                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
+                        <i class="bi bi-clock-history"></i> Riwayat
+                    </a>
                     <a href="/keranjang" class="btn btn-success rounded-pill me-2">
                         <i class="bi bi-cart-fill me-1"></i> Keranjang
                     </a>
