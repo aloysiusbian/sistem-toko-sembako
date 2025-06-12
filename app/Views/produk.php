@@ -52,7 +52,7 @@
   <nav class="navbar navbar-light bg-white border-bottom py-3 fixed-top">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src= <?=base_url("LogoSembakoKu.png")?> alt="Logo" height="40" class="me-2">
+        <img src=<?= base_url("LogoSembakoKu.png") ?> alt="Logo" height="40" class="me-2">
       </a>
       <form class="d-flex w-50 me-3">
         <input class="form-control rounded-start-pill" type="search" placeholder="Search" />
@@ -63,7 +63,7 @@
           <i class="bi bi-cart-fill me-1"></i> Keranjang
         </a>
         <a href="#" class="btn btn-success rounded-pill">
-          <i class="bi bi-person-fill me-1"></i> Account
+          <i class="bi bi-box-arrow-right me-1"></i> Log Out
         </a>
       </div>
     </div>
@@ -75,7 +75,7 @@
       <!-- Gambar produk -->
       <div class="col-md-6">
         <div class="main-image">
-          <img src="<?= base_url($produk['gambar'])?>" alt="<?= esc($produk['nama_produk']) ?>" class="img-fluid">
+          <img src="<?= base_url($produk['gambar']) ?>" alt="<?= esc($produk['nama_produk']) ?>" class="img-fluid">
         </div>
       </div>
 
@@ -85,7 +85,7 @@
         <div class="price mb-3">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></div>
         <p class="text-muted"><?= esc($produk['deskripsi']) ?></p>
 
-        <hr/>
+        <hr />
 
         <form action="/keranjang/add" method="post">
           <?= csrf_field() ?>
@@ -93,7 +93,7 @@
           <input type="hidden" name="quantity" value="1">
           <button type="submit" class="btn btn-success w-100 py-2 fs-5">Add to Cart</button>
         </form>
-        
+
       </div>
     </div>
   </div>
@@ -109,7 +109,7 @@
         <div class="col-md-4 mb-3">
           <h6 class="footer-title">Navigasi</h6>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-decoration-none text-dark">Beranda</a></li>
+            <li><a href="/beranda" class="text-decoration-none text-dark">Beranda</a></li>
             <li><a href="#" class="text-decoration-none text-dark">Keranjang</a></li>
           </ul>
         </div>

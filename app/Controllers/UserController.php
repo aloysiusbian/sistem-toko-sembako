@@ -94,4 +94,3 @@ class UserController extends BaseController
         return redirect()->to('/login');
     }
 }
-

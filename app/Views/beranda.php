@@ -49,7 +49,7 @@
                         <i class="bi bi-cart-fill me-1"></i> Keranjang
                     </a>
                     <a href="#" class="btn btn-success rounded-pill">
-                        <i class="bi bi-person-fill me-1"></i> Account
+                        <i class="bi bi-box-arrow-right me-1"></i> Log Out
                     </a>
                 </div>
             </div>
