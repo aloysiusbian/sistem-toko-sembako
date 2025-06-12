@@ -66,7 +66,11 @@
                 <a class="navbar-brand d-flex align-items-center" href="/beranda">
                     <img src="LogoSembakoKu.png" alt="Logo" height="40" class="me-2">
                 </a>
-                
+                <!-- Search Bar -->
+                <form class="d-flex w-50 me-3">
+                    <input class="form-control rounded-start-pill" type="search" placeholder="Search" />
+                    <button class="btn btn-success rounded-end-pill px-4" type="submit">Search</button>
+                </form>
                 <!-- Account & Cart Buttons -->
                 <div>
                     <a href="/keranjang" class="btn btn-success rounded-pill me-2">

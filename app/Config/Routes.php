@@ -16,7 +16,11 @@ $routes->get('/logout', 'UserController::logout');
 $routes->get('/register', 'UserController::register');
 $routes->post('/register', 'UserController::register');
 
+
 $routes->get('/produk', 'ProdukController::index');
-$routes->get('produk/detail/(:any)', 'ProdukController::detail/$1');
+$routes->get('produkg/detail/(:any)', 'ProdukController::detail/$1');
 
 $routes->get('/keranjang', 'KeranjangController::index');
+$routes->post('/keranjang/add', 'KeranjangController::add');
+$routes->post('/keranjang/remove/(:num)', 'KeranjangController::remove/$1');
+$routes->post('/keranjang/update/(:num)', 'KeranjangController::update/$1');
