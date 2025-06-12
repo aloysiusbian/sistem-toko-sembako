@@ -146,7 +146,7 @@
                                     return $carry + ($item['harga'] * $item['jumlah']);
                                 }, 0), 0, ',', '.') ?></span>
                             </div>
-                            <a href="/checkout" class="btn btn-success w-100 py-2">Checkout</a>
+                            <a href="/pembayaran" class="btn btn-success w-100 py-2">Checkout</a>
                         <?php endif; ?>
                         <a href="/beranda" class="btn btn-outline-success w-100 mt-2 py-2">Lanjutkan Belanja</a>
                     </div>
