@@ -18,7 +18,7 @@ $routes->post('/register', 'UserController::register');
 
 
 $routes->get('/produk', 'ProdukController::index');
-$routes->get('produk/detail/(:any)', 'ProdukController::detail/$1');
+$routes->get('produkg/detail/(:any)', 'ProdukController::detail/$1');
 
 $routes->get('/keranjang', 'KeranjangController::index');
 $routes->post('/keranjang/add', 'KeranjangController::add');
