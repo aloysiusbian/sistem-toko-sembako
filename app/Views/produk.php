@@ -85,8 +85,15 @@
         <div class="price mb-3">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></div>
         <p class="text-muted"><?= esc($produk['deskripsi']) ?></p>
 
-        <hr />
-        <button class="btn btn-success w-100 py-2 fs-5">Add to Cart</button>
+        <hr/>
+
+        <form action="/keranjang/add" method="post">
+          <?= csrf_field() ?>
+          <input type="hidden" name="produk_id" value="<?= $produk['id'] ?>">
+          <input type="hidden" name="quantity" value="1">
+          <button type="submit" class="btn btn-success w-100 py-2 fs-5">Add to Cart</button>
+        </form>
+        
       </div>
     </div>
   </div>
@@ -113,7 +120,7 @@
           <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> support@sembakoku.id</p>
           <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i> +62 812-3456-7890</p>
           <a href="#" class="text-success me-3 fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-success me-3 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.instagram.com/aloysiusbian_/" class="text-success me-3 fs-5"><i class="bi bi-instagram"></i></a>
           <a href="#" class="text-success fs-5"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>

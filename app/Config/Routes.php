@@ -20,9 +20,5 @@ $routes->post('/register', 'UserController::register');
 $routes->get('/produk', 'ProdukController::index');
 $routes->get('produk/detail/(:any)', 'ProdukController::detail/$1');
 
-$routes->group('keranjang', function ($routes) {
-    $routes->get('/', 'KeranjangController::index');
-    $routes->post('add', 'KeranjangController::add');
-    $routes->post('update/(:num)', 'KeranjangController::update/$1');
-    $routes->post('remove/(:num)', 'KeranjangController::remove/$1');
-});
+$routes->get('/keranjang', 'KeranjangController::index');
+
