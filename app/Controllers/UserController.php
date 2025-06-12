@@ -11,7 +11,7 @@ class UserController extends BaseController
     {
         return view('login');
     }
-    
+
 
     public function register()
     {
@@ -32,7 +32,7 @@ class UserController extends BaseController
         $model->register($post);
         return View('login');
     }
-        public function auth()
+    public function auth()
     {
         $session = session();
         $model = new UserModel();
@@ -43,35 +43,33 @@ class UserController extends BaseController
             'username' => 'required',
             'password' => 'required|min_length[3]'
         ]);
+
         if (!$validation->withRequest($this->request)->run()) {
-            dd('VALIDASI GAGAL', $validation->getErrors()); // Debug 1
             return redirect()->back()->withInput()->with('errors', $validation->getErrors());
         }
 
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
 
-        $user = $model->login($username);
-        dd('DATA USER:', $user); // Debug 2
+        // Cari user berdasarkan username
+        $user = $model->where('username', $username)->first();
 
         if (!$user) {
-            dd('USER TIDAK DITEMUKAN'); // Debug 3
-            return redirect()->back()->withInput()->with('error', 'Username atau email tidak ditemukan.');
+            return redirect()->back()->withInput()->with('error', 'Username tidak ditemukan.');
         }
 
-        if ($password !== $user['password']) {
-            dd('PASSWORD SALAH', 'Input:', $password, 'DB:', $user['password']); // Debug 4
+        // Verifikasi password (disarankan menggunakan password_hash())
+        if (!($password == $user['password'])) {
             return redirect()->back()->withInput()->with('error', 'Password salah.');
         }
 
+        // Set session data
         $session->set([
             'username' => $user['username'],
             'nama_lengkap' => $user['nama_lengkap'],
             'email' => $user['email'],
             'logged_in' => true
         ]);
-
-        dd('LOGIN BERHASIL', session()->get()); // Debug 5
 
         return redirect()->to('/beranda');
     }
@@ -83,10 +81,9 @@ class UserController extends BaseController
 
         return view('preview_user', [
             'username' => $username,
-            'password' => $password
+            // Jangan tampilkan password di preview
         ]);
     }
-
 
     public function logout()
     {

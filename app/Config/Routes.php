@@ -16,7 +16,6 @@ $routes->get('/logout', 'UserController::logout');
 $routes->get('/register', 'UserController::register');
 $routes->post('/register', 'UserController::register');
 
-
 $routes->get('/produk', 'ProdukController::index');
 $routes->get('produk/detail/(:any)', 'ProdukController::detail/$1');
 
