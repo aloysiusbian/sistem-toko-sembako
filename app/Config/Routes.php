@@ -24,3 +24,7 @@ $routes->get('/keranjang', 'KeranjangController::index');
 $routes->post('/keranjang/add', 'KeranjangController::add');
 $routes->post('/keranjang/remove/(:num)', 'KeranjangController::remove/$1');
 $routes->post('/keranjang/update/(:num)', 'KeranjangController::update/$1');
+$routes->get('/pembayaran', 'PembayaranController::index');
+$routes->post('/pembayaran/proses', 'PembayaranController::proses');
+
+$routes->get('/checkout', 'PembayaranController::index');
