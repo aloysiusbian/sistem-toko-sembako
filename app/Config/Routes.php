@@ -21,4 +21,3 @@ $routes->get('/produk', 'ProdukController::index');
 $routes->get('produk/detail/(:any)', 'ProdukController::detail/$1');
 
 $routes->get('/keranjang', 'KeranjangController::index');
-
