@@ -168,8 +168,6 @@
                     <h6 class="fw-bold">Navigasi</h6>
                     <ul class="list-unstyled small">
                         <li><a href="/beranda" class="text-decoration-none text-dark">Beranda</a></li>
-                        <li><a href="/produk" class="text-decoration-none text-dark">Produk</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark">Favorit</a></li>
                         <li><a href="/keranjang" class="text-decoration-none text-dark">Keranjang</a></li>
                     </ul>
                 </div>
