@@ -10,12 +10,8 @@ class RiwayatController extends BaseController
     {
         $model = new PembayaranModel();
 
-<<<<<<< HEAD
         $data['riwayat'] = $model->orderBy('created_at', 'DESC')->findAll();
 
         return view('riwayat', $data);
-=======
-        return view('riwayat', ['riwayat' => $riwayat]);
->>>>>>> 62dca86749ef226867ac89f1da8c5b7ee30ef6ea
     }
 }
