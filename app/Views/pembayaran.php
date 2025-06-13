@@ -71,14 +71,14 @@
 
 <body>
     <header>
-        <!-- Navbar -->
+       
         <nav class="navbar navbar-light bg-white border-bottom py-3 fixed-top">
             <div class="container d-flex justify-content-between align-items-center">
-                <!-- Logo -->
+           
                 <a class="navbar-brand d-flex align-items-center" href="/beranda">
                     <img src="LogoSembakoKu.png" alt="Logo" height="40" class="me-2">
                 </a>
-                <!-- Account & Cart Buttons -->
+           
                 <div>
                     <a href="/riwayat" class="btn btn-outline-success rounded-pill me-2">
                         <i class="bi bi-clock-history"></i> Riwayat
@@ -174,14 +174,14 @@
     <footer class="bg-light text-dark mt-5 pt-4 pb-3 border-top">
         <div class="container">
             <div class="row">
-                <!-- Tentang SembakoKu -->
+              
                 <div class="col-md-4 mb-3">
                     <h5 class="fw-bold text-success">SembakoKu</h5>
                     <p class="small">Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga
                         terbaik dan pengiriman cepat.</p>
                 </div>
 
-                <!-- Link Navigasi -->
+               
                 <div class="col-md-4 mb-3">
                     <h6 class="fw-bold">Navigasi</h6>
                     <ul class="list-unstyled small">
@@ -190,7 +190,7 @@
                     </ul>
                 </div>
 
-                <!-- Kontak & Sosial Media -->
+              
                 <div class="col-md-4 mb-3">
                     <h6 class="fw-bold">Hubungi Kami</h6>
                     <p class="small mb-1"><i class="bi bi-envelope-fill me-2"></i> support@sembakoku.id</p>
