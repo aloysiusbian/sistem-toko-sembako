@@ -11,6 +11,7 @@
     <style>
         body {
             font-family: 'Lato', sans-serif;
+            padding-top: 70px; /* Untuk navbar fixed */
         }
 
         h1,
@@ -24,6 +25,61 @@
         span,
         a {
             font-weight: 400;
+        }
+        
+        /* Style untuk card produk */
+        .product-card {
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-img-container {
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%; /* Membuat kotak 1:1 */
+            position: relative;
+            overflow: hidden;
+            background-color: #f8f9fa;
+        }
+        
+        .product-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-card .card-body {
+            padding: 1rem;
+        }
+        
+        .product-name {
+            font-size: 0.95rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 2.8em; /* Untuk 2 baris teks */
+        }
+        
+        .product-price {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+        
+        .product-btn {
+            padding: 0.25rem 1rem;
+            font-size: 0.85rem;
+            width: 100%;
         }
     </style>
 </head>
@@ -52,37 +108,34 @@
                 </div>
             </div>
         </nav>
-        <br><br>
     </header>
 
-    <div class="container my-5 pt-4">
+    <div class="container my-4 pt-4">
         <h2 class="fw-bold mb-4 text-center text-success">Produk Kami</h2>
     </div>
 
-
-    <div class="container my-5">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-        <?php foreach ($daftarProduk as $produk): ?>
-            <div class="col">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="<?= $produk['gambar'] ?>" class="card-img-top" alt="<?= $produk['nama_produk'] ?>" style="height: 200px; object-fit: cover;">
-                    <div class="card-body text-center">
-                        <p class="fw-bold mb-1"><?= $produk['nama_produk'] ?></p>
-                        <h6 class="fw-bold mb-2 text-success">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></h6>
-                        <a href="<?= 'produk/detail/' . $produk['id'] ?>" class="btn btn-success rounded-pill px-4">Details</a>
+    <div class="container mb-5">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+            <?php foreach ($daftarProduk as $produk): ?>
+                <div class="col">
+                    <div class="card h-100 product-card">
+                        <div class="product-img-container">
+                            <img src="<?= $produk['gambar'] ?>" class="product-img" alt="<?= $produk['nama_produk'] ?>">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column">
+                            <p class="product-name mb-auto"><?= $produk['nama_produk'] ?></p>
+                            <h6 class="product-price fw-bold text-success">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></h6>
+                            <a href="<?= 'produk/detail/' . $produk['id'] ?>" class="btn btn-success rounded-pill product-btn mt-2">Detail</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
-</div>
 
-
-
-    <footer class="bg-light text-dark mt-5 pt-4 pb-3 border-top">
+    <footer class="bg-light text-dark pt-4 pb-3 border-top">
         <div class="container">
             <div class="row">
-
                 <!-- Tentang SembakoKu -->
                 <div class="col-md-4 mb-3">
                     <h5 class="fw-bold text-success">SembakoKu</h5>
@@ -118,6 +171,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

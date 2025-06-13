@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            background-color: #f8f9fa;
+            background-color:rgb(255, 255, 255);
         }
 
         h1,
@@ -153,7 +153,7 @@
                                 <button type="submit" class="btn btn-success btn-pay">
                                     <i class="bi bi-lock-fill me-2"></i> Bayar Sekarang
                                 </button>
-                                <a href="/keranjang" class="btn btn-outline-secondary rounded-pill">
+                                <a href="/keranjang" class="btn btn-outline-success rounded-pill">
                                     <i class="bi bi-arrow-left me-2"></i> Kembali ke Keranjang
                                 </a>
                             </div>
