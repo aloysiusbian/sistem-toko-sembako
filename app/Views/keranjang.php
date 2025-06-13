@@ -11,7 +11,8 @@
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            padding-top: 70px; /* Account for fixed navbar */
+            padding-top: 70px;
+            /* Account for fixed navbar */
         }
 
         h1,
@@ -66,17 +67,15 @@
                 <a class="navbar-brand d-flex align-items-center" href="/beranda">
                     <img src="LogoSembakoKu.png" alt="Logo" height="40" class="me-2">
                 </a>
-                <!-- Search Bar -->
-                <form class="d-flex w-50 me-3">
-                    <input class="form-control rounded-start-pill" type="search" placeholder="Search" />
-                    <button class="btn btn-success rounded-end-pill px-4" type="submit">Search</button>
-                </form>
                 <!-- Account & Cart Buttons -->
                 <div>
-                    <a href="/keranjang" class="btn btn-success rounded-pill me-2">
+                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
+                        <i class="bi bi-clock-history"></i> Riwayat
+                    </a>
+                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
                         <i class="bi bi-cart-fill me-1"></i> Keranjang
                     </a>
-                    <a href="#" class="btn btn-outline-success rounded-pill">
+                    <a href="#/logout class="btn btn-success rounded-pill">
                         <i class="bi bi-box-arrow-right me-1"></i> Log Out
                     </a>
                 </div>
@@ -88,7 +87,7 @@
         <div class="row">
             <div class="col-md-8">
                 <h2 class="fw-bold mb-4">Keranjang Belanja</h2>
-                
+
                 <?php if (empty($items)): ?>
                     <div class="text-center py-5">
                         <i class="bi bi-cart-x" style="font-size: 5rem; color: #6c757d;"></i>
@@ -128,7 +127,7 @@
                     </div>
                 <?php endif; ?>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="card shadow-sm border-0 summary-card">
                     <div class="card-body">
@@ -136,15 +135,15 @@
                         <?php if (!empty($items)): ?>
                             <div class="d-flex justify-content-between mb-2">
                                 <span>Total Item</span>
-                                <span class="fw-bold"><?= array_reduce($items, function($carry, $item) {
-                                    return $carry + $item['jumlah'];
-                                }, 0) ?></span>
+                                <span class="fw-bold"><?= array_reduce($items, function ($carry, $item) {
+                                                            return $carry + $item['jumlah'];
+                                                        }, 0) ?></span>
                             </div>
                             <div class="d-flex justify-content-between mb-3">
                                 <span>Total Harga</span>
-                                <span class="fw-bold">Rp <?= number_format(array_reduce($items, function($carry, $item) {
-                                    return $carry + ($item['harga'] * $item['jumlah']);
-                                }, 0), 0, ',', '.') ?></span>
+                                <span class="fw-bold">Rp <?= number_format(array_reduce($items, function ($carry, $item) {
+                                                                return $carry + ($item['harga'] * $item['jumlah']);
+                                                            }, 0), 0, ',', '.') ?></span>
                             </div>
                             <a href="/pembayaran" class="btn btn-success w-100 py-2">Checkout</a>
                         <?php endif; ?>

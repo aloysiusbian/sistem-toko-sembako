@@ -38,15 +38,15 @@
                 <a class="navbar-brand d-flex align-items-center" href="#">
                     <img src="LogoSembakoKu.png" alt="Logo" height="40" class="me-2">
                 </a>
-                <!-- Account & Cart Buttons -->
+                <!-- Logout & Cart Buttons -->
                 <div>
                     <a href="#" class="btn btn-outline-success rounded-pill me-2">
                         <i class="bi bi-clock-history"></i> Riwayat
                     </a>
-                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
+                    <a href="/keranjang" class="btn btn-outline-success rounded-pill me-2">
                         <i class="bi bi-cart-fill me-1"></i> Keranjang
                     </a>
-                    <a href="#" class="btn btn-success rounded-pill">
+                    <a href="/logout" class="btn btn-success rounded-pill">
                         <i class="bi bi-box-arrow-right me-1"></i> Log Out
                     </a>
                 </div>
