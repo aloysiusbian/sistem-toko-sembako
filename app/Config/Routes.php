@@ -31,6 +31,3 @@ $routes->get('/checkout', 'PembayaranController::index');
 
 $routes->get('/riwayat', 'RiwayatController::index');
 $routes->get('/riwayat/detail/(:num)', 'RiwayatController::detail/$1');
-$routes->get('/riwayat', 'RiwayatController::index');
-
-
