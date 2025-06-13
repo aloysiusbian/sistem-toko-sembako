@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <style>
         body {
+            background-image: 'background2.jpg';
             font-family: 'Lato', sans-serif;
             padding-top: 70px;
-            /* Account for fixed navbar */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         h1,
@@ -54,6 +57,17 @@
             position: sticky;
             top: 90px;
         }
+
+        /* Tambahan untuk footer */
+        .container.my-5 {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            width: 100%;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 
@@ -72,10 +86,10 @@
                     <a href="#" class="btn btn-outline-success rounded-pill me-2">
                         <i class="bi bi-clock-history"></i> Riwayat
                     </a>
-                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
+                    <a href="/keranjang" class="btn btn-outline-success rounded-pill me-2">
                         <i class="bi bi-cart-fill me-1"></i> Keranjang
                     </a>
-                    <a href="#/logout class="btn btn-success rounded-pill">
+                    <a href="/logout" class="btn btn-success rounded-pill">
                         <i class="bi bi-box-arrow-right me-1"></i> Log Out
                     </a>
                 </div>
