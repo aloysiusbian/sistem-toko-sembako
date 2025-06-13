@@ -2,20 +2,28 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riwayat Pembayaran - SembakoKu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <style>
         body {
             font-family: "Lato", sans-serif;
             padding-top: 70px;
         }
+
+        .fw-bold {
+            font-weight: 700;
+        }
+
         .riwayat-item {
             padding: 15px;
             border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
         }
+
         .riwayat-item:hover {
             background-color: #f8f9fa;
         }

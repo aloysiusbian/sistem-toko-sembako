@@ -9,6 +9,7 @@ class RiwayatController extends BaseController
     public function index(): string
     {
         $model = new PembayaranModel();
+        $riwayat = $model->orderBy('created_at', 'DESC')->findAll();
 
         $data['riwayat'] = $model->orderBy('created_at', 'DESC')->findAll();
 
