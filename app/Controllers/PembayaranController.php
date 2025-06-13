@@ -42,7 +42,7 @@ class PembayaranController extends BaseController
             return redirect()->back()->with('error', 'Harap isi semua data pembayaran.');
         }
 
-        // Hitung total dan buat ringkasan produk
+      
         $totalHarga = 0;
         $produkList = [];
 
@@ -53,7 +53,6 @@ class PembayaranController extends BaseController
 
         $produkString = implode(', ', $produkList);
 
-        // Simpan ke database
         $pembayaranModel = new PembayaranModel();
         $pembayaranModel->insert([
             'nama'       => $nama,
@@ -61,10 +60,10 @@ class PembayaranController extends BaseController
             'metode'     => $metode,
             'total'      => $totalHarga,
             'produk'     => $produkString,
-            'created_at' => date('Y-m-d H:i:s') // pastikan kolom created_at bertipe DATETIME
+            'created_at' => date('Y-m-d H:i:s') 
         ]);
 
-        // Kosongkan keranjang
+       
         $session->remove('keranjang');
 
         return view('pembayaran_sukses', [
