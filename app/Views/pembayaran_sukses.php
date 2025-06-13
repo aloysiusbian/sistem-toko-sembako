@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toko Sembako Online</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <style>
@@ -58,7 +59,7 @@
                 </a>
                 <!-- Account & Cart Buttons -->
                 <div>
-                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
+                    <a href="/riwayat" class="btn btn-outline-success rounded-pill me-2">
                         <i class="bi bi-clock-history"></i> Riwayat
                     </a>
                     <a href="/keranjang" class="btn btn-outline-success rounded-pill me-2">
@@ -93,7 +94,8 @@
                 <!-- Tentang SembakoKu -->
                 <div class="col-md-4 mb-3">
                     <h5 class="fw-bold text-success">SembakoKu</h5>
-                    <p class="small">Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga terbaik dan pengiriman cepat.</p>
+                    <p class="small">Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga
+                        terbaik dan pengiriman cepat.</p>
                 </div>
 
                 <!-- Link Navigasi -->
@@ -112,7 +114,8 @@
                     <p class="small mb-1"><i class="bi bi-telephone-fill me-2"></i> +62 812-3456-7890</p>
                     <div>
                         <a href="#" class="text-success me-3 fs-5"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/aloysiusbian_/" class="text-success me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.instagram.com/aloysiusbian_/" class="text-success me-3 fs-5"><i
+                                class="bi bi-instagram"></i></a>
                         <a href="#" class="text-success fs-5"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>

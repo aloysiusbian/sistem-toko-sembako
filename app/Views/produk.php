@@ -60,9 +60,10 @@
         <button class="btn btn-success rounded-end-pill px-4" type="submit">Search</button>
       </form>
       <div>
-        <a href="#" class="btn btn-outline-success rounded-pill me-2">
+        <a href="/riwayat" class="btn btn-outline-success rounded-pill me-2">
           <i class="bi bi-clock-history"></i> Riwayat
         </a>
+
         <a href="/keranjang" class="btn btn-outline-success rounded-pill me-2">
           <i class="bi bi-cart-fill me-1"></i> Keranjang
         </a>
@@ -108,7 +109,8 @@
       <div class="row text-muted">
         <div class="col-md-4 mb-3">
           <h5 class="text-success footer-title">SembakoKu</h5>
-          <p>Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga terbaik dan pengiriman cepat.</p>
+          <p>Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga terbaik dan pengiriman
+            cepat.</p>
         </div>
         <div class="col-md-4 mb-3">
           <h6 class="footer-title">Navigasi</h6>
@@ -122,7 +124,8 @@
           <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> support@sembakoku.id</p>
           <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i> +62 812-3456-7890</p>
           <a href="#" class="text-success me-3 fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/aloysiusbian_/" class="text-success me-3 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.instagram.com/aloysiusbian_/" class="text-success me-3 fs-5"><i
+              class="bi bi-instagram"></i></a>
           <a href="#" class="text-success fs-5"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>

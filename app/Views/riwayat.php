@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Riwayat Pembelian</title>
+    <title>Riwayat Pembayaran</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-<div class="container mt-4">
-    <h2 class="mb-4">Riwayat Pembelian</h2>
-    <div class="row">
-        <?php foreach ($riwayat as $item): ?>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow">
-                    <img src="<?= base_url('uploads/' . $item['gambar']) ?>" class="card-img-top" alt="<?= $item['nama_produk'] ?>">
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $item['nama_produk'] ?></h5>
-                        <p class="card-text">Jumlah: <?= $item['jumlah'] ?></p>
-                        <p class="card-text">Total Harga: Rp<?= number_format($item['total_harga'], 0, ',', '.') ?></p>
-                        <p class="card-text text-muted"><small>Tanggal: <?= date('d M Y', strtotime($item['tanggal_pembelian'])) ?></small></p>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+<div class="container mt-5">
+    <h2>Riwayat Pembayaran</h2>
+    <table class="table table-bordered mt-4">
+        <thead class="table-light">
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Metode</th>
+                <th>Total</th>
+                <th>Waktu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if (!empty($riwayat)): ?>
+                <?php foreach ($riwayat as $item): ?>
+                    <tr>
+                        <td><?= esc($item['nama']) ?></td>
+                        <td><?= esc($item['alamat']) ?></td>
+                        <td><?= esc($item['metode']) ?></td>
+                        <td>Rp<?= number_format($item['total'], 0, ',', '.') ?></td>
+                        <td><?= esc($item['created_at']) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="5" class="text-center">Belum ada riwayat pembayaran.</td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
 </div>
-
 </body>
 </html>
+

@@ -5,17 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keranjang Belanja - SembakoKu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <style>
         body {
-            background-image: 'background2.jpg';
             font-family: 'Lato', sans-serif;
             padding-top: 70px;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         h1,
@@ -57,17 +53,6 @@
             position: sticky;
             top: 90px;
         }
-
-        /* Tambahan untuk footer */
-        .container.my-5 {
-            flex: 1;
-        }
-
-        footer {
-            background-color: #f8f9fa;
-            width: 100%;
-            flex-shrink: 0;
-        }
     </style>
 </head>
 
@@ -83,7 +68,8 @@
                 </a>
                 <!-- Account & Cart Buttons -->
                 <div>
-                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
+                    <!-- ✅ Tombol Riwayat diarahkan ke /riwayat -->
+                    <a href="/riwayat" class="btn btn-outline-success rounded-pill me-2">
                         <i class="bi bi-clock-history"></i> Riwayat
                     </a>
                     <a href="/keranjang" class="btn btn-outline-success rounded-pill me-2">
@@ -149,15 +135,11 @@
                         <?php if (!empty($items)): ?>
                             <div class="d-flex justify-content-between mb-2">
                                 <span>Total Item</span>
-                                <span class="fw-bold"><?= array_reduce($items, function ($carry, $item) {
-                                                            return $carry + $item['jumlah'];
-                                                        }, 0) ?></span>
+                                <span class="fw-bold"><?= array_reduce($items, fn($carry, $item) => $carry + $item['jumlah'], 0) ?></span>
                             </div>
                             <div class="d-flex justify-content-between mb-3">
                                 <span>Total Harga</span>
-                                <span class="fw-bold">Rp <?= number_format(array_reduce($items, function ($carry, $item) {
-                                                                return $carry + ($item['harga'] * $item['jumlah']);
-                                                            }, 0), 0, ',', '.') ?></span>
+                                <span class="fw-bold">Rp <?= number_format(array_reduce($items, fn($carry, $item) => $carry + ($item['harga'] * $item['jumlah']), 0), 0, ',', '.') ?></span>
                             </div>
                             <a href="/pembayaran" class="btn btn-success w-100 py-2">Checkout</a>
                         <?php endif; ?>
@@ -171,12 +153,10 @@
     <footer class="bg-light text-dark mt-5 pt-4 pb-3 border-top">
         <div class="container">
             <div class="row">
-                <!-- Tentang SembakoKu -->
                 <div class="col-md-4 mb-3">
                     <h5 class="fw-bold text-success">SembakoKu</h5>
                     <p class="small">Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga terbaik dan pengiriman cepat.</p>
                 </div>
-                <!-- Link Navigasi -->
                 <div class="col-md-4 mb-3">
                     <h6 class="fw-bold">Navigasi</h6>
                     <ul class="list-unstyled small">
@@ -184,14 +164,13 @@
                         <li><a href="/keranjang" class="text-decoration-none text-dark">Keranjang</a></li>
                     </ul>
                 </div>
-                <!-- Kontak & Sosial Media -->
                 <div class="col-md-4 mb-3">
                     <h6 class="fw-bold">Hubungi Kami</h6>
                     <p class="small mb-1"><i class="bi bi-envelope-fill me-2"></i> support@sembakoku.id</p>
                     <p class="small mb-1"><i class="bi bi-telephone-fill me-2"></i> +62 812-3456-7890</p>
                     <div>
                         <a href="#" class="text-success me-3 fs-5"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/aloysiusbian_/" class="text-success me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-success me-3 fs-5"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="text-success fs-5"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
@@ -205,7 +184,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Quantity buttons functionality
         document.querySelectorAll('.plus-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const input = this.parentNode.querySelector('.quantity-input');
@@ -224,7 +202,6 @@
             });
         });
 
-        // Auto submit when quantity changes
         document.querySelectorAll('.quantity-input').forEach(input => {
             input.addEventListener('change', function() {
                 if (this.value > 0) {
@@ -234,5 +211,4 @@
         });
     </script>
 </body>
-
 </html>

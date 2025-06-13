@@ -5,13 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pembayaran - SembakoKu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            background-color:rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255);
         }
 
         h1,
@@ -79,7 +80,7 @@
                 </a>
                 <!-- Account & Cart Buttons -->
                 <div>
-                    <a href="#" class="btn btn-outline-success rounded-pill me-2">
+                    <a href="/riwayat" class="btn btn-outline-success rounded-pill me-2">
                         <i class="bi bi-clock-history"></i> Riwayat
                     </a>
                     <a href="/keranjang" class="btn btn-outline-success rounded-pill me-2">
@@ -116,23 +117,28 @@
                             <div class="mb-4">
                                 <label for="nama" class="form-label fw-bold">Nama Lengkap</label>
                                 <div class="input-group">
-                                    <span class="input-group-text bg-light"><i class="bi bi-person-fill text-success"></i></span>
-                                    <input type="text" name="nama" class="form-control" placeholder="Masukkan nama lengkap" required>
+                                    <span class="input-group-text bg-light"><i
+                                            class="bi bi-person-fill text-success"></i></span>
+                                    <input type="text" name="nama" class="form-control"
+                                        placeholder="Masukkan nama lengkap" required>
                                 </div>
                             </div>
 
                             <div class="mb-4">
                                 <label for="alamat" class="form-label fw-bold">Alamat Pengiriman</label>
                                 <div class="input-group">
-                                    <span class="input-group-text bg-light"><i class="bi bi-house-door-fill text-success"></i></span>
-                                    <textarea name="alamat" class="form-control" rows="3" placeholder="Masukkan alamat lengkap pengiriman" required></textarea>
+                                    <span class="input-group-text bg-light"><i
+                                            class="bi bi-house-door-fill text-success"></i></span>
+                                    <textarea name="alamat" class="form-control" rows="3"
+                                        placeholder="Masukkan alamat lengkap pengiriman" required></textarea>
                                 </div>
                             </div>
 
                             <div class="mb-4">
                                 <label for="metode" class="form-label fw-bold">Metode Pembayaran</label>
                                 <div class="input-group">
-                                    <span class="input-group-text bg-light"><i class="bi bi-credit-card-2-front-fill text-success"></i></span>
+                                    <span class="input-group-text bg-light"><i
+                                            class="bi bi-credit-card-2-front-fill text-success"></i></span>
                                     <select name="metode" class="form-select" required>
                                         <option value="">-- Pilih Metode Pembayaran --</option>
                                         <option value="transfer">Transfer Bank</option>
@@ -145,7 +151,8 @@
                             <div class="mb-4 total-display">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="fw-bold">Total Pembayaran:</span>
-                                    <span class="fs-4 fw-bold text-success">Rp <?= number_format($totalHarga, 0, ',', '.') ?></span>
+                                    <span class="fs-4 fw-bold text-success">Rp
+                                        <?= number_format($totalHarga, 0, ',', '.') ?></span>
                                 </div>
                             </div>
 
@@ -170,7 +177,8 @@
                 <!-- Tentang SembakoKu -->
                 <div class="col-md-4 mb-3">
                     <h5 class="fw-bold text-success">SembakoKu</h5>
-                    <p class="small">Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga terbaik dan pengiriman cepat.</p>
+                    <p class="small">Toko sembako online terpercaya yang menyediakan kebutuhan harian Anda dengan harga
+                        terbaik dan pengiriman cepat.</p>
                 </div>
 
                 <!-- Link Navigasi -->
@@ -189,7 +197,8 @@
                     <p class="small mb-1"><i class="bi bi-telephone-fill me-2"></i> +62 812-3456-7890</p>
                     <div>
                         <a href="#" class="text-success me-3 fs-5"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/aloysiusbian_/" class="text-success me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.instagram.com/aloysiusbian_/" class="text-success me-3 fs-5"><i
+                                class="bi bi-instagram"></i></a>
                         <a href="#" class="text-success fs-5"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
@@ -202,7 +211,9 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
