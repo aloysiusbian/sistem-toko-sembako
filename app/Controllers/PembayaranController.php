@@ -15,7 +15,7 @@ class PembayaranController extends BaseController
             return redirect()->to('/keranjang')->with('error', 'Keranjang Anda kosong.');
         }
 
-        $totalHarga = array_reduce($items, function($carry, $item) {
+        $totalHarga = array_reduce($items, function ($carry, $item) {
             return $carry + ($item['harga'] * $item['jumlah']);
         }, 0);
 
@@ -42,24 +42,33 @@ class PembayaranController extends BaseController
             return redirect()->back()->with('error', 'Harap isi semua data pembayaran.');
         }
 
-        $totalHarga = array_reduce($items, function($carry, $item) {
-            return $carry + ($item['harga'] * $item['jumlah']);
-        }, 0);
+        // Hitung total dan buat ringkasan produk
+        $totalHarga = 0;
+        $produkList = [];
 
+        foreach ($items as $item) {
+            $totalHarga += $item['harga'] * $item['jumlah'];
+            $produkList[] = $item['nama_produk'] . ' x' . $item['jumlah'];
+        }
+
+        $produkString = implode(', ', $produkList);
+
+        // Simpan ke database
         $pembayaranModel = new PembayaranModel();
         $pembayaranModel->insert([
-            'nama' => $nama,
-            'alamat' => $alamat,
-            'metode' => $metode,
-            'total' => $totalHarga,
-            'created_at' => date('Y-m-d H:i:s')
+            'nama'       => $nama,
+            'alamat'     => $alamat,
+            'metode'     => $metode,
+            'total'      => $totalHarga,
+            'produk'     => $produkString,
+            'created_at' => date('Y-m-d H:i:s') // pastikan kolom created_at bertipe DATETIME
         ]);
 
         // Kosongkan keranjang
         $session->remove('keranjang');
 
         return view('pembayaran_sukses', [
-            'nama' => $nama,
+            'nama'  => $nama,
             'total' => $totalHarga
         ]);
     }
