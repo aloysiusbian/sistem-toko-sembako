@@ -11,7 +11,7 @@ $routes->match(['get', 'post'], '/', 'UserController::register');
 $routes->get('/beranda', 'BerandaController::index');
 
 $routes->get('/login', 'UserController::login');
-$routes->post('/login', 'UserController::auth');
+$routes->post('/login', 'UserController::verif');
 $routes->get('/logout', 'UserController::logout');
 $routes->get('/register', 'UserController::register');
 $routes->post('/register', 'UserController::register');

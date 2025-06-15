@@ -122,7 +122,7 @@
 
           <h3>Login ke SembakoKu</h3>
 
-          <!-- Menampilkan pesan sukses (misal setelah registrasi) -->
+
           <?php if (session()->getFlashdata('success')): ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
               <?= session()->getFlashdata('success') ?>
@@ -138,7 +138,7 @@
             </div>
           <?php endif; ?>
 
-          <!-- Form Login -->
+         
           <form action="/login" method="post">
             <?= csrf_field() ?>
 
