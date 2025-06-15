@@ -11,6 +11,8 @@ class RiwayatController extends BaseController
         $model = new PembayaranModel();
         $riwayat = $model->orderBy('created_at', 'DESC')->findAll();
 
-        return view('riwayat', ['riwayat' => $riwayat]);
+        $data['riwayat'] = $model->orderBy('created_at', 'DESC')->findAll();
+
+        return view('riwayat', $data);
     }
 }
